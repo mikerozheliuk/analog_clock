@@ -1,0 +1,90 @@
+body {
+    background-color: #bad9fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.clock{
+    background: #2c3238;
+    height: 350px;
+    width: 350px;
+    border: 20px solid #212c37;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 20px 20px 47px #192029,
+                inset -20px -20px 47px #212c37;
+}
+
+.clock::before{
+    background:#848484;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    content: '';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.clock .hour, .min, .sec{
+    position: absolute;
+}
+
+.clock .hour .hr,
+.clock .min .mn,
+.clock .sec .sc{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.clock .hour .hr::before{
+    background:#fff;
+    border-radius: 6px 6px 0 0;
+    content: '';
+    height: 80px;
+    width: 8px;
+    z-index: 1;
+}
+
+.clock .hour,
+.clock .hour .hr{
+    height: 160px;
+    width: 160px;
+}
+
+.clock .min .mn::before{
+    background:#eee;
+    border-radius: 6px 6px 0 0;
+    content: '';
+    height: 90px;
+    width: 4px;
+    z-index: 2;
+}
+
+.clock .min,
+.clock .min .mn{
+    height: 190px;
+    width: 190px;
+}
+
+.clock .sec .sc::before{
+    background:#ff6767;
+    border-radius: 6px 6px 0 0;
+    content: '';
+    height: 120px;
+    width: 2px;
+    z-index: 3;
+}
+
+.clock .sec,
+.clock .sec .sc{
+    height: 230px;
+    width: 230px;
+}
